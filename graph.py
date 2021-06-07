@@ -43,7 +43,6 @@ class Graph:
 		# node.value = color
 		self.graph[src] = node
 
-
 		#	Adding the source node to the destination as it is the undirected graph
 		node = AdjNode(src)
 		node.next = self.graph[dest]
@@ -82,7 +81,7 @@ class Graph:
 
 
 if(__name__ == "__main__"):
-	V = 5
+	V = 10
 	graph = Graph(V)
 	graph.addEdge(0, 1)
 	graph.addEdge(0, 2)
