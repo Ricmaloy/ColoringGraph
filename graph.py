@@ -13,6 +13,11 @@
 	https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/?ref=ghm
 """
 
+
+#   import time for calc of the execution time
+import time
+inicio = time.time()
+
 class AdjNode:
 	def __init__(self, data):
 		self.vertex = data
@@ -106,6 +111,77 @@ class Graph:
 			i += 1
 		return
 
+
+"""  Grafo 01
+if(__name__ == "__main__"):
+	V = 5
+	graph = Graph(V)
+	graph.addEdge(0, 1)
+	graph.addEdge(0, 4)
+	graph.addEdge(0, 3)
+
+	graph.addEdge(1, 4)
+	graph.addEdge(1, 2)
+
+	graph.addEdge(2, 3)
+	graph.addEdge(2, 4)
+
+	graph.addEdge(3, 4)
+"""
+
+
+"""  Grafo 02
+if(__name__ == "__main__"):
+	V = 5
+	graph = Graph(V)
+	graph.addEdge(0, 4)
+	graph.addEdge(1, 4)
+	graph.addEdge(2, 4)
+	graph.addEdge(3, 4)
+"""
+
+
+"""  Grafo 03
+if(__name__ == "__main__"):
+	V = 5
+	graph = Graph(V)
+	graph.addEdge(0, 1)
+	graph.addEdge(0, 4)
+
+	graph.addEdge(2, 4)
+	graph.addEdge(2, 3)
+"""
+
+
+"""  Grafo 04
+if(__name__ == "__main__"):
+	V = 5
+	graph = Graph(V)
+	graph.addEdge(0, 4)
+	graph.addEdge(0, 3)
+
+	graph.addEdge(1, 4)
+	graph.addEdge(1, 2)
+
+	graph.addEdge(2, 3)
+"""
+
+
+"""  Grafo 05
+if(__name__ == "__main__"):
+	V = 5
+	graph = Graph(V)
+	graph.addEdge(0, 1)
+	graph.addEdge(0, 2)
+
+	graph.addEdge(4, 3)
+	graph.addEdge(4, 2)
+
+	graph.addEdge(1, 3)
+"""
+
+
+"""  Grafo 06
 if(__name__ == "__main__"):
 	V = 10
 	graph = Graph(V)
@@ -136,30 +212,7 @@ if(__name__ == "__main__"):
 	# graph.printGraph()
 	graph.colorizeGraph()
 	graph.printColorGraph()
-
-
 """
-(0,1)
-(0,2)
-(0,3)
 
-(1,4)
-(1,5)
-
-(4,6)
-(4,9)
-
-(6,2)
-(6,8)
-
-(2,7)
-
-(7,5)
-(7,9)
-
-(5,8)
-
-(8,3)
-
-(3,9)
-"""
+fim = time.time()
+#print(fim - inicio)
