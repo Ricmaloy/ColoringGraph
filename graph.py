@@ -8,12 +8,7 @@
 	https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/?ref=ghm
 """
 
-#	A class to represent the adjacency list of the node
-from typing import Collection
-
-
 class AdjNode:
-
 	def __init__(self, data):
 		self.vertex = data
 		self.next = None
@@ -75,10 +70,36 @@ class Graph:
 		return
 
 	def colorizeGraph(self):
-		
-		return
-	
+		i = 0
 
+		#	Colorizing each vertex
+		while(i < self.V):
+			neighbor = []
+			usedColors = []
+
+			#	Verifying neighbors
+			temp = self.graph[i]
+			while(temp):
+				neighbor.append(temp.vertex)
+				temp = temp.next
+			
+			#	Verifying nearest colors in use
+			for obj in neighbor:
+				temp = self.VColor[obj]
+				usedColors.append(temp)
+
+			usedColors = list(set(usedColors))
+
+			#	Search for the first color available
+			availableColor = ""
+			for obj in self.color:
+				if(not (obj in usedColors)):
+					availableColor = obj
+					break
+			
+			self.VColor[i] = availableColor
+			i += 1
+		return
 
 if(__name__ == "__main__"):
 	V = 10
@@ -107,8 +128,7 @@ if(__name__ == "__main__"):
 
 	graph.addEdge(3, 9)
 
-	graph.printGraph()
-
+	# graph.printGraph()
 	graph.colorizeGraph()
 	graph.printColorGraph()
 
