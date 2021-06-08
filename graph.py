@@ -1,5 +1,10 @@
 """
-	Grafo para Trabalho de AA: Coloração de Vértices
+	Grafo para Trabalho Final de Análise de Algoritmo: Coloração de Vértices
+
+	Alunos:
+		Pedro Henrique Rabis Diniz - 11811BCC024
+		Ricardo Zamboni Silva - 11821BCC004
+	
 
 	pair(u, v): edge between "u" and "v"
 		*	u: vertex "u"
